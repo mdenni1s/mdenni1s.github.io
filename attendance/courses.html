@@ -38,11 +38,15 @@
 
   <!-- Cards -->
   <div class="cards-grid">
-    <div class="card"><h3>Courses</h3><p class="stat-number">350</p></div>
-    <div class="card"><h3>Active</h3><p class="stat-number">25</p></div>
-    <div class="card"><h3>Past</h3><p class="stat-number">18</p></div>
-    <div class="card"><h3>In session</h3><p class="stat-number">7</p></div>
-  </div>
+    <div class="card">
+      <h3>Courses</h3>
+      <p class="stat-number" id="lbltotalactivecourses">loading...</p>
+    </div>
+    <div class="card">
+      <h3>Active</h3>
+      <p class="stat-number" id="lbltotalinactivecourses">loading...</p>
+    </div>
+   </div>
 
 
  <!-- Form -->
@@ -89,21 +93,56 @@
       <table>
         <thead>
           <tr>
-            <th>Course ID</th>
-            <th>Course name</th>
+            <th>CourseCode</th>
+            <th>LecturerName</th>
             <th>Venue</th>
-            <th>Action</th>
+            <th>LecturerName</th>
+             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tablebody">
           <tr>
             <td>###</td>
             <td>###</td>
             <td>###</td>
+            <td>###</td>
             <td>
-            <button class="btn btngreen">Open Session</button>
-            <button class="btn btnred">Close course</button>
-            <button class="btn btnblue">View attendance</button>
+            <button class="btn btnred">
+              Suspend course
+            </button>
+           </td>
+        </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+     <!-- Table -->
+  <div class="card">
+    <h2>Inactive courses</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>CourseCode</th>
+            <th>LecturerName</th>
+            <th>Venue</th>
+            <th>LecturerName</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tablebodyinactive">
+          <tr>
+            <td>###</td>
+            <td>###</td>
+            <td>###</td>
+            <td>###</td>
+            <td>
+              <button class="btn btngreen">
+                Activate course
+              </button>
           </td>
         </tr>
           
