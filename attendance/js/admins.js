@@ -140,7 +140,7 @@ function loaddatainactive(){
  // count admin
 
 
-let lbtotalactive = document.getElementById('lbtotalactive')
+let lbltotalactive = document.getElementById('lbltotalactive')
 firebase.database().ref("userDetails").once("value", function(snapshot) {
   let total = 0
   snapshot.forEach(function(childSnapshot){
@@ -150,10 +150,10 @@ firebase.database().ref("userDetails").once("value", function(snapshot) {
     }
 
   })
-  lbtotalactive.innerHTML = total
+  lbltotalactive.innerHTML = total
 })
 // inactive 
-let lbtotalinactive = document.getElementById('lbtotalinactive')
+let lbltotalinactive = document.getElementById('lbltotalinactive')
 firebase.database().ref("userDetails").once("value", function(snapshot) {
   let total = 0
   snapshot.forEach(function(childSnapshot){
@@ -162,5 +162,5 @@ firebase.database().ref("userDetails").once("value", function(snapshot) {
       total++
     }
     })
-  lbtotalinactive.innerHTML = total
+  lbltotalinactive.innerHTML = total
 })

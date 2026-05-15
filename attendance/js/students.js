@@ -139,7 +139,7 @@ function loaddatainactive(){
 
 
 
-let lbtotalActive = document.getElementById('lbtotalActive')
+let lbltotalactive = document.getElementById('lbltotalactive')
 firebase.database().ref("userDetails").once("value", function(snapshot) {
   let total = 0
   snapshot.forEach(function(childSnapshot){
@@ -149,10 +149,10 @@ firebase.database().ref("userDetails").once("value", function(snapshot) {
     }
 
   })
-  lbtotalActive.innerHTML = total
+  lbltotalactive.innerHTML = total
 })
 // inactive 
-let lbtotalInavtive = document.getElementById('lbtotalInavtive')
+let lbltotalinactive = document.getElementById('lbltotalinactive')
 firebase.database().ref("userDetails").once("value", function(snapshot) {
   let total = 0
   snapshot.forEach(function(childSnapshot){
@@ -161,6 +161,6 @@ firebase.database().ref("userDetails").once("value", function(snapshot) {
       total++
     }
     })
-  lbtotalInavtive.innerHTML = total
+  lbltotalinactive.innerHTML = total
 })
 

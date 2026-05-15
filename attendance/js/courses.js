@@ -214,7 +214,7 @@ function activatecourse(courseid){
 
 // count courses
 
-let lbtotalactivecourses = document.getElementById('lbtotalactivecourses')
+let lbltotalactivecourses = document.getElementById('lbltotalactivecourses')
 firebase.database().ref("Courses").once("value", function(snapshot) {
   let total = 0
   snapshot.forEach(function(childSnapshot){
@@ -224,10 +224,10 @@ firebase.database().ref("Courses").once("value", function(snapshot) {
     }
 
   })
-  lbtotalactivecourses.innerHTML = total
+  lbltotalactivecourses.innerHTML = total
 })
 // inactive 
-let lbtotalinactivecourses = document.getElementById('lbtotalinactivecourses')
+let lbltotalinactivecourses = document.getElementById('lbltotalinactivecourses')
 firebase.database().ref("Courses").once("value", function(snapshot) {
   let total = 0
   snapshot.forEach(function(childSnapshot){
@@ -236,5 +236,5 @@ firebase.database().ref("Courses").once("value", function(snapshot) {
       total++
     }
     })
-  lbtotalinactivecourses.innerHTML = total
+  lbltotalinactivecourses.innerHTML = total
 })
